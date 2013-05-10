@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+
+<!-- 
+  				%c        输出所属类的全名，可在修改为 %d{Num} ,Num类名输出的维（如："org.apache.elathen.ClassName",%C{2}将输出elathen.ClassName）
+                %d       输出日志时间其格式为 %d{yyyy-MM-dd HH:mm:ss,SSS}，可指定格式 如 %d{HH:mm:ss}
+                %l        输出日志事件发生位置，包括类目名、发生线程，在代码中的行数
+                %n       换行符
+                %m      输出代码指定信息，如info(“message”),输出message
+                %p       输出优先级，即 FATAL ,ERROR 等
+                %r        输出从启动到显示该log信息所耗费的毫秒数
+                %t        输出产生该日志事件的线程名
+ -->
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<!-- 将所有的日志输出到控制台 -->
+	<appender name="myConsole" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="fatal" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+	
+	<!-- 将所有错误级别的日志输出到sys.log文件中，一般是发生excption的情况 -->
+	<appender name="errorFile" class="org.apache.log4j.FileAppender">
+		<param name="File" value="error.log" />    <!-- 设置日志输出文件名 -->
+		<param name="Append" value="false" />    <!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="error" />
+			<param name="levelMax" value="error" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+	
+	<!-- 将所有错误级别的日志输出到sys.log文件中，一般是发生excption的情况 -->
+	<appender name="myFile" class="org.apache.log4j.FileAppender">
+		<param name="File" value="sys.log" />    <!-- 设置日志输出文件名 -->
+		<param name="Append" value="false" />    <!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="fatal" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+	<!-- 根logger的设置 -->
+	<root>
+		<priority value="info" />
+	  	<appender-ref ref="errorFile" />
+	  	<appender-ref ref="myFile" />
+		<appender-ref ref="myConsole"/>
+	</root>
+</log4j:configuration>

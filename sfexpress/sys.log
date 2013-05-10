@@ -1,0 +1,42 @@
+[10 23:16:27,682 INFO ] [main] utils.DBUtils - DBstring is: jdbc:odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=
+[10 23:16:27,702 INFO ] [main] utils.DBUtils - Connect db success!
+[10 23:16:27,703 INFO ] [main] utils.DBUtils - CREATE TABLE province(id counter primary key, province_name varchar(50))
+[10 23:16:27,705 INFO ] [main] utils.DBUtils - CREATE TABLE city(id counter primary key, city_name varchar(50))
+[10 23:16:27,706 INFO ] [main] utils.DBUtils - CREATE TABLE area(id counter primary key, area_name varchar(50))
+[10 23:16:27,708 INFO ] [main] utils.DBUtils - CREATE TABLE country(id counter primary key, country_name varchar(50))
+[10 23:16:27,709 INFO ] [main] utils.DBUtils - CREATE TABLE sfexpress_service_time(id counter primary key, src_province_no integer,src_city_no integer,src_area_no integer,src_country_no integer,dst_province_no integer,dst_city_no integer,dst_area_no integer,dst_country_no integer,t1_time double,t4_time double,sp4_time double,t801_time double,sp5_time double,t6_time double,add_time double,add_addr varchar(50))
+[10 23:16:27,840 INFO ] [main] utils.DBUtils - save province(安徽) success!
+[10 23:16:27,842 INFO ] [main] utils.DBUtils - save province(澳门) success!
+[10 23:16:27,843 INFO ] [main] utils.DBUtils - save province(北京) success!
+[10 23:16:27,844 INFO ] [main] utils.DBUtils - save province(福建) success!
+[10 23:16:27,845 INFO ] [main] utils.DBUtils - save province(甘肃) success!
+[10 23:16:27,846 INFO ] [main] utils.DBUtils - save province(广东) success!
+[10 23:16:27,846 INFO ] [main] utils.DBUtils - save province(广西) success!
+[10 23:16:27,847 INFO ] [main] utils.DBUtils - save province(贵州) success!
+[10 23:16:27,848 INFO ] [main] utils.DBUtils - save province(海南) success!
+[10 23:16:27,849 INFO ] [main] utils.DBUtils - save province(河北) success!
+[10 23:16:27,850 INFO ] [main] utils.DBUtils - save province(河南) success!
+[10 23:16:27,850 INFO ] [main] utils.DBUtils - save province(黑龙江) success!
+[10 23:16:27,851 INFO ] [main] utils.DBUtils - save province(湖北) success!
+[10 23:16:27,852 INFO ] [main] utils.DBUtils - save province(湖南) success!
+[10 23:16:27,853 INFO ] [main] utils.DBUtils - save province(吉林) success!
+[10 23:16:27,855 INFO ] [main] utils.DBUtils - save province(江苏) success!
+[10 23:16:27,856 INFO ] [main] utils.DBUtils - save province(江西) success!
+[10 23:16:27,856 INFO ] [main] utils.DBUtils - save province(辽宁) success!
+[10 23:16:27,857 INFO ] [main] utils.DBUtils - save province(内蒙古) success!
+[10 23:16:27,858 INFO ] [main] utils.DBUtils - save province(宁夏) success!
+[10 23:16:27,859 INFO ] [main] utils.DBUtils - save province(青海) success!
+[10 23:16:27,860 INFO ] [main] utils.DBUtils - save province(山东) success!
+[10 23:16:27,861 INFO ] [main] utils.DBUtils - save province(山西) success!
+[10 23:16:27,861 INFO ] [main] utils.DBUtils - save province(陕西) success!
+[10 23:16:27,862 INFO ] [main] utils.DBUtils - save province(上海) success!
+[10 23:16:27,863 INFO ] [main] utils.DBUtils - save province(四川) success!
+[10 23:16:27,864 INFO ] [main] utils.DBUtils - save province(台湾) success!
+[10 23:16:27,865 INFO ] [main] utils.DBUtils - save province(天津) success!
+[10 23:16:27,866 INFO ] [main] utils.DBUtils - save province(西藏) success!
+[10 23:16:27,867 INFO ] [main] utils.DBUtils - save province(香港) success!
+[10 23:16:27,868 INFO ] [main] utils.DBUtils - save province(新疆) success!
+[10 23:16:27,869 INFO ] [main] utils.DBUtils - save province(云南) success!
+[10 23:16:27,870 INFO ] [main] utils.DBUtils - save province(浙江) success!
+[10 23:16:27,872 INFO ] [main] utils.DBUtils - save province(重庆) success!
+[10 23:16:27,924 INFO ] [main] utils.DBUtils - close db success!
